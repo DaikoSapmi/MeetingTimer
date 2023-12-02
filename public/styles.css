@@ -1,0 +1,141 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center; /* Sentrerer alt innhold */
+  }
+  
+  #timerForm {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    width: 100px;
+    border: 1px solid #ddd;
+    margin: 10px 5px;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #003d82;
+  }
+  
+  #stopTimerButton {
+    background-color: #d9534f;
+  }
+  
+  #stopTimerButton:hover {
+    background-color: #c9302c;
+  }
+  
+  .active-timer {
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+  
+  .negative {
+    color: red;
+  }
+  
+  .timer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timer-info {
+    flex-grow: 1; /* Gir info-delen fleksibilitet til å fylle tilgjengelig plass */
+  }
+  
+  .timer-controls {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .timer-controls button {
+    margin-left: 10px; /* Legger til mellomrom mellom knappene */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    input[type="number"] {
+      width: 80px;
+    }
+  
+    .timer-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .timer-controls {
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 10px;
+    }
+  
+    .timer-controls button {
+      margin: 0;
+    }
+  }
+  /* Center the table */
+.timer-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  /* Style header row */
+  .timer-table th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Style odd rows with lighter grey background */
+  .timer-table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style even rows */
+  .timer-table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  /* Style table cells and buttons */
+  .timer-table td {
+    padding: 10px;
+  }
+  
+  .knapper {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
