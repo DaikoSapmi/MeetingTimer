@@ -102,7 +102,7 @@ function displayTimers() {
       const row = document.createElement('tr');
       row.innerHTML = `
         <td>Timer ${index + 1}</td>
-        <td>${timer.minutes} minutes ${timer.seconds} seconds</td>
+        <td>${timer.minutes} : ${timer.seconds}</td>
         <td>
           <button class="knapper" onclick="startTimer(${index})">Start</button>
           <button class="knapper" onclick="deleteTimer(${index})">Delete</button>
