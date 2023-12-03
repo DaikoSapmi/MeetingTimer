@@ -101,7 +101,7 @@ function displayTimers() {
     timers.forEach((timer, index) => {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td>Timer ${index + 1}</td>
+        <td><b>T${index + 1}</b></td>
         <td>${timer.minutes} : ${timer.seconds}</td>
         <td>
           <button class="knapper" onclick="startTimer(${index})">Start</button>

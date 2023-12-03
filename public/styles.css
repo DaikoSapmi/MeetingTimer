@@ -126,6 +126,22 @@ body {
   .timer-table td {
     padding: 10px;
   }
+
+  /* Table Styles */
+table {
+  width: 90%; /* Full width */
+  table-layout: fixed; /* Fixed table layout */
+  border-collapse: collapse; /* Optional: removes space between cells */
+}
+
+/* Table Cell Styles */
+td, th {
+  word-wrap: break-word; /* Allows text to wrap inside cells */
+  text-align: left; /* Align text to the left, adjust as needed */
+  padding: 8px; /* Adjust padding as needed */
+}
+/* Set the width for the first two columns */
+
   
   .knapper {
     background-color: #4CAF50;
@@ -134,11 +150,33 @@ body {
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 14px;
     cursor: pointer;
+    display: inline-block; /* or 'inline' */
   }
-  /* Existing styles (include your current CSS here) */
+
+  .timer-table td:last-child {
+    display: flex; /* Flexbox layout for the last column */
+    justify-content: space-around; /* Adjusts spacing between buttons */
+    align-items: center; /* Vertically centers the buttons */
+    padding: 10px; /* Adjust padding as needed */
+}
+/* Set the width for the first three columns */
+td:not(:last-child), th:not(:last-child) {
+  width: 25%; /* This makes the total of these three columns 50% */
+}
+
+.timer-table td:last-child button {
+    display: inline-block; /* Ensures buttons are inline */
+    margin-right: 10px; /* Adds space between buttons */
+    width: 70%; /* Adjusts the width of the buttons */
+    min-width: 50px; /* Ensures a minimum width for buttons */
+}
+
+/* Remove margin for the last button */
+.timer-table td:last-child button:last-child {
+    margin-right: 0;
+}
 
 /* Additional Responsive Styles */
 
