@@ -143,56 +143,52 @@ body {
 /* Additional Responsive Styles */
 
 /* Base styles */
-body {
-  font-family: 'Arial', sans-serif;
+body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Flexbox or Grid can be used for overall layout */
+/* Flexbox for overall layout */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  width: 100%; /* Ensures full width */
+  max-width: 100%;
 }
 
-/* Responsive Typography */
-h1 {
-  font-size: 2em; /* Base size */
+/* Ensure elements within container don't cause overflow */
+.container * {
+  max-width: 100%; /* Ensures no element is wider than the screen */
+  box-sizing: border-box; /* Includes padding and border in the element's width */
+}
+
+/* Ensure elements within container don't cause overflow */
+.container * {
+  max-width: 100%; /* Ensures no element is wider than the screen */
+  box-sizing: border-box; /* Includes padding and border in the element's width */
 }
 
 /* Responsive Form Elements */
 input[type="number"], button {
-  width: 90%; /* Base width */
-  margin: 10px 0;
+  width: 90%;
+  margin: 10px auto;
   padding: 10px;
   border-radius: 5px;
 }
 
-/* Media Queries for different screen sizes */
+/* Adjust form elements' width on larger screens */
 @media (min-width: 600px) {
-  .container {
-      flex-direction: row;
-  }
-  
-  h1 {
-      font-size: 2.5em;
-  }
-
   input[type="number"], button {
-      width: 40%;
+      width: 50%; /* Adjust width as needed */
   }
 }
 
 @media (min-width: 1024px) {
-  h1 {
-      font-size: 3em;
-  }
-
   input[type="number"], button {
-      width: 30%;
+      width: 40%; /* Adjust width as needed */
   }
 }
