@@ -138,4 +138,61 @@ body {
     font-size: 14px;
     cursor: pointer;
   }
+  /* Existing styles (include your current CSS here) */
+
+/* Additional Responsive Styles */
+
+/* Base styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Flexbox or Grid can be used for overall layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Responsive Typography */
+h1 {
+  font-size: 2em; /* Base size */
+}
+
+/* Responsive Form Elements */
+input[type="number"], button {
+  width: 90%; /* Base width */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Media Queries for different screen sizes */
+@media (min-width: 600px) {
+  .container {
+      flex-direction: row;
+  }
   
+  h1 {
+      font-size: 2.5em;
+  }
+
+  input[type="number"], button {
+      width: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+      font-size: 3em;
+  }
+
+  input[type="number"], button {
+      width: 30%;
+  }
+}
